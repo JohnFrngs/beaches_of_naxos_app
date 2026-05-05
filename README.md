@@ -10,7 +10,7 @@
 
 Built with **.NET / C# WinForms** using **Visual Studio Enterprise**, published as a self-contained single-file executable.
 
-Download the zip file / app here and run .exe [Releases](../../releases)
+Download the zip file / app [here](../../releases) and run .exe.
 
 ***
 
