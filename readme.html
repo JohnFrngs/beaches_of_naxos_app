@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beaches of Naxos — Desktop App</title>
+    <link rel="stylesheet" href="readme-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="page-wrapper">
+
+        <!-- HEADER -->
+        <header class="readme-header">
+            <div class="back-link"><a href="../../index.html">← Back to Portfolio</a></div>
+            <h1>🏖️ Beaches of Naxos</h1>
+            <p class="subtitle">Desktop Application — C# WinForms</p>
+            <div class="badges">
+                <img src="https://img.shields.io/badge/platform-Windows-blue?style=flat-square&logo=windows" alt="Platform">
+                <img src="https://img.shields.io/badge/language-C%23-purple?style=flat-square&logo=csharp" alt="Language">
+                <img src="https://img.shields.io/badge/framework-WinForms-.NET-blueviolet?style=flat-square" alt="Framework">
+                <img src="https://img.shields.io/badge/license-Proprietary-red?style=flat-square" alt="License">
+                <img src="https://img.shields.io/badge/version-1.0-brightgreen?style=flat-square" alt="Version">
+            </div>
+            <div class="note-box">
+                📌 <strong>Note:</strong> This is a mini project developed as part of a university course assignment and uploaded here for completeness.
+                My main portfolio with more advanced work is available at my <a href="../index.html">personal website</a>.
+            </div>
+            <a href="../../releases" class="btn-download">⬇️ Download App (.zip)</a>
+        </header>
+
+        <main class="readme-body">
+
+            <!-- OVERVIEW -->
+            <section>
+                <h2>Overview</h2>
+                <p>
+                    <strong>Beaches of Naxos</strong> is a C# Windows Forms desktop application that serves as an interactive travel guide
+                    for the beaches of Naxos, Greece. The app showcases beach information, imagery, Google Maps integration, and practical
+                    travel tips — all within a multi-form desktop GUI.
+                </p>
+                <p>Built with <strong>.NET / C# WinForms</strong> using <strong>Visual Studio Enterprise</strong>, published as a self-contained single-file executable.</p>
+            </section>
+
+            <hr>
+
+            <!-- SCREENSHOTS -->
+            <section>
+                <h2>Screenshots</h2>
+                <div class="screenshot-grid">
+                    <div class="screenshot-card">
+                        <img src="screenshots/form1.png" alt="Main Menu" onerror="this.parentElement.classList.add('no-img')">
+                        <p>Main Menu</p>
+                        <span>Hero image with background music &amp; navigation</span>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="screenshots/form2.png" alt="Beaches Explorer" onerror="this.parentElement.classList.add('no-img')">
+                        <p>Beaches Explorer</p>
+                        <span>Slideshow with image, description &amp; Google Maps</span>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="screenshots/form3.png" alt="Naxos Guide" onerror="this.parentElement.classList.add('no-img')">
+                        <p>Naxos Guide</p>
+                        <span>Animated text presentation about Naxos</span>
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="screenshots/form4.png" alt="Traveller's Guide" onerror="this.parentElement.classList.add('no-img')">
+                        <p>Traveller's Guide</p>
+                        <span>Rich formatted travel info</span>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- FEATURES -->
+            <section>
+                <h2>Features</h2>
+                <ul class="feature-list">
+                    <li><span class="feat-icon">🎵</span><div><strong>Background music</strong> on launch with Play/Stop toggle</div></li>
+                    <li><span class="feat-icon">🖼️</span><div><strong>Auto-advancing image slideshow</strong> (timer-driven) with Pause/Resume control</div></li>
+                    <li><span class="feat-icon">📍</span><div><strong>Embedded Google Maps</strong> via WebView2 for each beach location</div></li>
+                    <li><span class="feat-icon">📝</span><div><strong>Animated text reveal</strong> in the Naxos info section (timer-driven sequential display)</div></li>
+                    <li><span class="feat-icon">🗺️</span><div><strong>Traveller's Guide</strong> with rich formatted text — transportation, accessibility, environment &amp; emergency info</div></li>
+                    <li><span class="feat-icon">🖨️</span><div><strong>Print page</strong> functionality across all forms (screen capture → PrintDocument)</div></li>
+                    <li><span class="feat-icon">💾</span><div><strong>Export to .txt</strong> with UTF-8 BOM encoding (for proper Greek character support)</div></li>
+                    <li><span class="feat-icon">ℹ️</span><div><strong>About dialog</strong> and application exit from menu strip</div></li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <!-- OOP -->
+            <section>
+                <h2>OOP Concepts Applied</h2>
+                <table>
+                    <thead>
+                        <tr><th>Concept</th><th>Where Applied</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Classes &amp; Objects</strong></td><td><code>PictureInfo</code> class encapsulates beach data (title, description, image, map URL); <code>SoundPlayer</code>, <code>PrintDocument</code>, <code>SaveFileDialog</code> instantiated as objects</td></tr>
+                        <tr><td><strong>Encapsulation</strong></td><td>All event handlers and internal fields declared <code>private</code>; access to form state controlled through methods</td></tr>
+                        <tr><td><strong>Inheritance</strong></td><td>All forms (<code>Form1</code>–<code>Form4</code>) inherit from <code>System.Windows.Forms.Form</code></td></tr>
+                        <tr><td><strong>Abstraction</strong></td><td>WinForms abstracts UI rendering; <code>PrintDocument</code> abstracts the print pipeline</td></tr>
+                        <tr><td><strong>Collections</strong></td><td><code>List&lt;PictureInfo&gt;</code> used to manage beach data dynamically</td></tr>
+                        <tr><td><strong>Event-Driven Programming</strong></td><td>Timer events, button click handlers, and menu strip events drive all interactivity</td></tr>
+                        <tr><td><strong>Constructor Initialization</strong></td><td>Form constructors initialize component state, set <code>ReadOnly</code> properties, and configure UI defaults</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <hr>
+
+            <!-- TECH STACK -->
+            <section>
+                <h2>Tech Stack</h2>
+                <div class="tech-grid">
+                    <div class="tech-item"><span>🔵</span><div><strong>Language</strong><p>C# (.NET)</p></div></div>
+                    <div class="tech-item"><span>🪟</span><div><strong>UI Framework</strong><p>Windows Forms (WinForms)</p></div></div>
+                    <div class="tech-item"><span>🌐</span><div><strong>Browser Component</strong><p>Microsoft WebView2</p></div></div>
+                    <div class="tech-item"><span>🛠️</span><div><strong>IDE</strong><p>Visual Studio Enterprise</p></div></div>
+                    <div class="tech-item"><span>📦</span><div><strong>Deployment</strong><p>Single-file self-contained (Windows x64)</p></div></div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- PROJECT STRUCTURE -->
+            <section>
+                <h2>Project Structure</h2>
+                <pre><code>GreekBeaches/
+├── Form1.cs          # Main menu — music, navigation
+├── Form2.cs          # Beaches slideshow — images, descriptions, Google Maps
+├── Form3.cs          # Naxos info — animated sequential text display
+├── Form4.cs          # Traveller's Guide — rich text, formatted sections
+├── PictureInfo.cs    # Data model class for beach entries
+├── Program.cs        # Entry point
+└── Properties/
+    └── Resources     # Embedded images, audio</code></pre>
+            </section>
+
+            <hr>
+
+            <!-- BEACHES -->
+            <section>
+                <h2>Beaches Covered</h2>
+                <table>
+                    <thead>
+                        <tr><th>Beach</th><th>Highlights</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Agia Anna</td><td>Picturesque fishing village, calm bay, easy access</td></tr>
+                        <tr><td>Agios Prokopios</td><td>Golden sand, flamingo salt lake ("Pink Lake") nearby</td></tr>
+                        <tr><td>Plaka</td><td>Longest beach on the island — 3+ km of fine sand</td></tr>
+                        <tr><td>Glyfada</td><td>Wind &amp; kitesurfing hotspot, crystal-clear waters</td></tr>
+                        <tr><td>Aliko / Hawaii Beach</td><td>Cedar forest, sand dunes, natural coves</td></tr>
+                        <tr><td>Mikri Vigla</td><td>Two-section beach — windsports south, calm swimming north</td></tr>
+                        <tr><td>Kastraki</td><td>Quiet bay, minimal organization, two coves</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <hr>
+
+            <!-- HOW TO RUN -->
+            <section>
+                <h2>How to Run</h2>
+                <ol class="steps">
+                    <li>Download the <code>.zip</code> from <a href="../../releases">Releases</a></li>
+                    <li>Extract to any folder</li>
+                    <li>Run <code>GreekBeaches.exe</code></li>
+                </ol>
+                <div class="info-box">
+                    ✅ Requires <strong>Windows 10/11</strong>. No installation needed — fully self-contained.
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- LICENSE -->
+            <section>
+                <h2>License</h2>
+                <p>Copyright © 2025 Ioannis Frangistas. All rights reserved.<br>
+                See <a href="LICENSE">LICENSE</a> for details.</p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>© 2025 Ioannis Frangistas · <a href="LICENSE">License</a> · <a href="../../index.html">Portfolio</a></p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
